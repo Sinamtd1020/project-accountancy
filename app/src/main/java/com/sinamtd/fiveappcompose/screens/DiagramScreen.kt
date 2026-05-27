@@ -44,6 +44,7 @@ import java.text.NumberFormat
 import java.util.Locale
 import kotlin.math.roundToInt
 
+@SuppressLint("SuspiciousIndentation")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DiagramScreen(viewModel: TransViewModel= hiltViewModel()){
