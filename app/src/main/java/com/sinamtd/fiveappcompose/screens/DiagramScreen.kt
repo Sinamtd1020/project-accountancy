@@ -57,8 +57,8 @@ fun DiagramScreen(viewModel: TransViewModel= hiltViewModel()){
         ) {
             Box(modifier = Modifier.fillMaxWidth()
                 .height(50.dp)
-                .background(Color.LightGray, shape = RoundedCornerShape(bottomEnd =12.dp, bottomStart = 12.dp)), contentAlignment = Alignment.CenterEnd){
-                Text("نمودار تراکنش ها", modifier = Modifier.padding(end = 10.dp, bottom = 10.dp), fontSize = 18.sp, fontWeight = FontWeight.Bold, color = Color.Black)
+                .background(Color(0xFF33048A), shape = RoundedCornerShape(bottomEnd =12.dp, bottomStart = 12.dp)), contentAlignment = Alignment.CenterEnd){
+                Text("نمودار تراکنش ها", modifier = Modifier.padding(end = 10.dp, bottom = 10.dp), fontSize = 18.sp, fontWeight = FontWeight.Bold, color = Color.White)
             }
             Spacer(Modifier.height(10.dp))
             // رادیو باتن‌ها
@@ -88,10 +88,10 @@ fun DiagramScreen(viewModel: TransViewModel= hiltViewModel()){
                 SimpleBarChart(monthlyData = chartData)
             } else {
                 Box(
-                    modifier = Modifier.fillMaxWidth(),
+                    modifier = Modifier.fillMaxSize(),
                     contentAlignment = Alignment.Center
                 ) {
-                    Text("هیچ داده‌ای برای این بازه وجود ندارد.")
+                    Text("هیچ داده‌ای برای این بازه وجود ندارد.", fontSize = 16.sp, color = Color.Black)
                 }
             }
         }
@@ -101,7 +101,7 @@ fun DiagramScreen(viewModel: TransViewModel= hiltViewModel()){
 @Composable
 fun TimeRangeButton(text: String, isSelected: Boolean, onClick: () -> Unit) {
     Row(verticalAlignment = Alignment.CenterVertically) {
-        RadioButton(selected = isSelected, onClick = onClick, colors = RadioButtonDefaults.colors(selectedColor = Color.Gray))
+        RadioButton(selected = isSelected, onClick = onClick, colors = RadioButtonDefaults.colors(selectedColor = Color(0xFF33048A)))
         Text(text = text, modifier = Modifier.padding(start = 4.dp))
     }
 }

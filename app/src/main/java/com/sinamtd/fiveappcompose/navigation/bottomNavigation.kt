@@ -29,7 +29,7 @@ fun BottonNavigationBar(navController: NavController){
                  } },
                 icon = { Icon( painter = painterResource(screen.icon), contentDescription = screen.title, modifier = Modifier.size(22.dp)) },
                 label = { Text(screen.title )},
-                colors = NavigationBarItemDefaults.colors(selectedIconColor = Color.Black, selectedTextColor = Color.Black, unselectedIconColor = Color.Gray, unselectedTextColor = Color.Gray)
+                colors = NavigationBarItemDefaults.colors(selectedIconColor = Color(0xFF33048A), selectedTextColor = Color(0xFF33048A), unselectedIconColor = Color.Gray, unselectedTextColor = Color.Gray)
             )
         }
     }

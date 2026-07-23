@@ -30,6 +30,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
@@ -111,12 +112,12 @@ fun AddTransactionScreen(navController: NavController, id: String, viewModel: Tr
     }
 
     Box(modifier = Modifier.fillMaxSize()) {
-        Column(modifier = Modifier.fillMaxSize().background(Color.White)) {
+        Column(modifier = Modifier.fillMaxSize().background(Brush.verticalGradient(Pair(0.1f,Color(0xFFE9E3F5)),Pair(0.9f,Color.White)))) {
             Box(
                 modifier = Modifier.fillMaxWidth()
                     .height(90.dp)
                     .background(
-                        Color.LightGray,
+                        Color(0xFF33048A),
                         shape = RoundedCornerShape(bottomEnd = 22.dp, bottomStart = 22.dp)
                     ), contentAlignment = Alignment.Center
             ) {
@@ -124,7 +125,7 @@ fun AddTransactionScreen(navController: NavController, id: String, viewModel: Tr
                     "تراکنش جدید",
                     fontSize = 20.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color.Black
+                    color = Color.White
                 )
             }
             Spacer(Modifier.height(12.dp))
@@ -145,7 +146,7 @@ fun AddTransactionScreen(navController: NavController, id: String, viewModel: Tr
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Text(text = getType(type), fontSize = 12.sp, color = Color.Black)
                         Spacer(Modifier.width(4.dp))
-                        RadioButton(selected = selectType==type, onClick = {selectType=type}, colors = RadioButtonDefaults.colors(selectedColor = Color.Gray))
+                        RadioButton(selected = selectType==type, onClick = {selectType=type}, colors = RadioButtonDefaults.colors(selectedColor = Color(0xFF33048A)))
                     }
                 }
 
@@ -233,22 +234,23 @@ fun AddTransactionScreen(navController: NavController, id: String, viewModel: Tr
                         onClick = {navController.popBackStack(Screens.History.rout, inclusive = false)},
                         modifier = Modifier.weight(0.5f).padding(12.dp),
                         colors = ButtonDefaults.buttonColors(
-                            containerColor = Color.Gray,
-                            contentColor = Color.Black
+                            containerColor = Color(0xFF33048A),
+                            contentColor = Color.White
                         )
                     ) {
                         Text(
                             "منصرف شدن",
                             modifier = Modifier.padding(vertical = 7.dp),
                             fontSize = 16.sp
+                            , color = Color.White
                         )
                     }
                     Button(
                     onClick = { updateTrans() },
                     modifier = Modifier.weight(0.5f).padding(12.dp),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color.Gray,
-                        contentColor = Color.Black
+                        containerColor = Color(0xFF33048A),
+                        contentColor = Color.White
                     )
                 ) {
                     Text(
@@ -263,8 +265,8 @@ fun AddTransactionScreen(navController: NavController, id: String, viewModel: Tr
                 onClick = {saveTrans()},
                 modifier = Modifier.fillMaxWidth().padding(12.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color.Gray,
-                    contentColor = Color.Black
+                    containerColor = Color(0xFF33048A),
+                    contentColor = Color.White
                 )
             ) {
                 Text(

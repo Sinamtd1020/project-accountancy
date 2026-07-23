@@ -1,5 +1,6 @@
 package com.sinamtd.fiveappcompose
 
+import android.annotation.SuppressLint
 import android.os.Build
 import android.os.Bundle
 import android.view.View
@@ -25,6 +26,7 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+    @SuppressLint("ObsoleteSdkInt")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -35,10 +37,8 @@ class MainActivity : ComponentActivity() {
         val windowInsetsController = WindowCompat.getInsetsController(window, window.decorView)
 
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
             window.statusBarColor = android.graphics.Color.LTGRAY
-
-        }
 
         windowInsetsController.isAppearanceLightStatusBars = true
 
