@@ -73,8 +73,6 @@ fun AddTransactionScreen(navController: NavController, id: String, viewModel: Tr
 
 
     }
-
-
     } }
     fun errorBlanc(): Boolean{
         amountError=amount.isBlank()

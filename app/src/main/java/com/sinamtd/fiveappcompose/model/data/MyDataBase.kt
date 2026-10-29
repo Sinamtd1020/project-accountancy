@@ -2,7 +2,6 @@ package com.sinamtd.fiveappcompose.model.data
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import androidx.room.TypeConverter
 import androidx.room.TypeConverters
 import com.sinamtd.fiveappcompose.model.data.dao.TransactionDao
 import com.sinamtd.fiveappcompose.model.data.entity.TransactionEntity

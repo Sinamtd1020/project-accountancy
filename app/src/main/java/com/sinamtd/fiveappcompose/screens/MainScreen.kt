@@ -1,8 +1,6 @@
 package com.sinamtd.fiveappcompose.screens
 
-import android.graphics.drawable.Icon
 import android.widget.Toast
-
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -18,19 +16,15 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Brush
 import androidx.compose.material.icons.filled.HourglassTop
 import androidx.compose.material.icons.filled.MonetizationOn
 import androidx.compose.material.icons.filled.ShoppingCart
-import androidx.compose.material.icons.filled.Update
 import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material.icons.outlined.HourglassTop
 import androidx.compose.material.icons.outlined.Warning
-import androidx.compose.material.icons.rounded.Warning
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.SegmentedButtonDefaults.Icon
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -39,7 +33,6 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.focus.focusModifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
@@ -56,7 +49,6 @@ import androidx.navigation.NavController
 import com.sinamtd.fiveappcompose.model.data.TransactionType
 import com.sinamtd.fiveappcompose.model.data.entity.TransactionEntity
 import com.sinamtd.fiveappcompose.navigation.Screens
-import com.sinamtd.fiveappcompose.ui.theme.Blue
 import com.sinamtd.fiveappcompose.ui.theme.Green
 import com.sinamtd.fiveappcompose.ui.theme.GreenLight
 import com.sinamtd.fiveappcompose.ui.theme.Orange
@@ -68,7 +60,6 @@ import com.sinamtd.fiveappcompose.ui.theme.Red
 import com.sinamtd.fiveappcompose.ui.theme.RedLight
 import com.sinamtd.fiveappcompose.viewmodel.TransViewModel
 import java.text.NumberFormat
-import kotlin.math.round
 
 @Composable
 fun MainScreen(navController: NavController, viewModel:TransViewModel = hiltViewModel()){
